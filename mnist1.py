@@ -18,7 +18,7 @@ app = Flask(__name__)
 def allowed_file(filename):
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
-model = load_model('./model1.h5', compile = Ture)#学習済みモデルをロード
+model = load_model('./model1.h5', compile = True)#学習済みモデルをロード
 
 
 @app.route('/', methods=['GET', 'POST'])
